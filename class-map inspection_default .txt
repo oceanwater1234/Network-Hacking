@@ -1,0 +1,12 @@
+ class-map inspection_default 
+match default-inspection-traffic
+exit
+
+policy-map global_policy
+class inspection_default
+inspect icmp 
+exit
+
+(inpsect dns and inspect http)
+
+service-policy global_policy global 
